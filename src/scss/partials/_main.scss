@@ -1,0 +1,189 @@
+.main {
+    margin-top: 7rem;
+}
+
+.form {
+    padding: 4rem 0;
+}
+
+.form__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    .form__content--title {
+        font-size: 2.5rem;
+        color: $white;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 1px $black;
+        @include screen(tablet) {
+            font-size: 3.5rem;
+        }
+    }
+}
+
+.form__contentForm {
+        .main-wrapper {
+            @include screen(desktop_l) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: baseline;
+        }
+    }
+    label {
+        display: block;
+        margin: 1rem 0;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+    input, select {
+        width: 100%;
+        max-width: 250px;
+        padding: 1rem 0;
+        text-indent: 2rem;
+        background: none;
+        border: none;
+        display: inline-block;
+        border-bottom: 1px solid $black;
+        transition: $basicTrans;
+        &:focus, &:hover, &:active {
+            max-width: 300px;
+            @include screen(mobile) {
+                max-width: 75%;
+            }
+        }
+        &:placeholder {
+            transition: $basicTrans;
+            text-align: center;
+        }
+        @include screen(mobile) {
+            max-width: 300px;
+        }
+    }
+}
+.form__contentFormElement {
+    margin: 5rem 0;
+    position: relative;
+    @include screen(tablet) {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    @include screen(desktop_l) {
+        flex: 1 0 50%;
+    }
+    &.error {
+        transition: $basicTrans;
+        input, select {
+            transition: $basicTrans;
+            border: 1px solid red;
+        }
+    }
+}
+
+.form__contentFormCheckbox {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    &.error {
+        transition: $basicTrans;
+        span {
+            transition: $basicTrans;
+            border-bottom: 1px solid red;
+            padding-bottom: 2px;
+        }
+    }
+    @include screen(tablet) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-top: 0;
+    }
+    @include screen(desktop_l) {
+        flex: 1 0 50%;
+    }
+    input {
+        display: block;
+        height: 20px;
+        border-radius: 0;
+        margin: 2rem 0;
+        @include screen(tablet) {
+            margin: 0;
+            flex: 0 0 10%;
+        }
+    }
+    .form__contentFormElement--msgError {
+        bottom: 60px;
+        @include screen(tablet) {
+            bottom: 0;
+        }
+    }
+}
+
+.form__contentFormElement--msgError {
+    position: absolute;
+    display: block;
+    color: red;
+    text-align: center;
+    width: 100%;
+    transition: $basicTrans;
+    bottom: -30px;
+    &.hiddenOn {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+.form__contentForm--send {
+    padding: 1rem 5rem;
+    background: none;
+    border: 2px solid $white;
+    background: rgba(57, 64, 71, 0.7098039215686275);
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $white;
+    transition: $basicTrans;
+    cursor: pointer;
+    &:focus, &:hover, &:active {
+        border-color: $white;
+        background: $white;
+        color: rgba(57, 64, 71, 0.7098039215686275);
+    }
+    @include screen(tablet) {
+        margin: 3rem 0;
+    }
+}
+
+/* Listuser */
+
+.listUser {
+    padding: 4rem 0;
+}
+
+.flistUser__table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    th {
+        background-color: $white;
+        padding: 4px;
+        font-size: 1rem;
+        width: 52px;
+        @include screen(tablet) {
+            width: 150px;
+            font-size: 2rem;
+        }
+    }
+    th, td {
+        text-align: left;
+        @include screen(mobile) {
+            padding: 14px;
+        }
+    }
+}
