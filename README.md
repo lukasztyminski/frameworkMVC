@@ -2,7 +2,7 @@
 
 The project for task to company recruit.
 
-* Source: [github.com/lukasztyminski/OssomForms](https://github.com/lukasztyminski/frameworkMVC)
+* Source: [https://github.com/lukasztyminski/frameworkMVC](https://github.com/lukasztyminski/frameworkMVC)
 * Documentation: [DOCS.md](https://github.com/lukasztyminski/frameworkMVC/blob/master/DOCS.md)
 
 ## License
