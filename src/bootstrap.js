@@ -5,7 +5,10 @@
     window.app = {};
 
     document.addEventListener('DOMContentLoaded', function(){
-        console.log('Application start');
+        const model = new app.UserColletionModel();
+        const view = new app.MainView(model);
+
+        view.render();
     });
 
 })();
